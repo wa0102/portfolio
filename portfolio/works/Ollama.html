@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ollama AI Chat | Works</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="../index.html">Portfolio</a>
+    </div>
+</header>
+
+<main class="work-detail">
+
+    <section>
+        <h1>Ollama AI Chat</h1>
+
+        <p>
+            C#（ASP.NET Core）とPython（FastAPI）を組み合わせて開発したAIチャットアプリです。<br>
+            Ollamaを使用し、外部へデータが流出しない完全ローカル環境でAIと対話できるシステムを構築しました。
+        </p>
+    </section>
+    
+    <section>
+        <h2>概要</h2>
+        <p>
+            ローカル環境で安全かつ手軽にAIとチャットができるWebアプリケーションです。
+        </p>
+    </section>
+
+    <section>
+        <h2>開発のきっかけ</h2>
+        <p>
+            機密情報の漏洩リスクを気にせず使えるセキュアなAI環境の必要性を感じたこと、そして何より「自分専用のAIチャット環境」を自作してみたいという強い興味があったことがきっかけです。
+        </p>
+        <p>
+            一からシステムを設計・実装することで、学習しているC#とPythonのプログラミングスキルを高める目的で制作しました。
+        </p>
+    </section>
+
+    <section>
+        <h2>使用技術</h2>
+        <ul>
+            <li>ASP.NET Core MVC</li>
+            <li>C#</li>
+            <li>Python</li>
+            <li>FastAPI / Pydantic</li>
+            <li>Ollama (gemma:2b)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>機能</h2>
+        <ul>
+            <li>ローカルLLMとの対話（完全オフライン動作）</li>
+            <li>1往復ごとのリアルタイムなAI対話機能</li>
+            <li>ユーザーとAIの役割（ロール）の動的変換処理</li>
+            <li>システムプロンプトによるモデルの制御</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>画面イメージ</h2>
+
+        <div class="screenshots">
+            <figure>
+                <img src="../images/チャット欄.png" alt="チャット画面">
+                <figcaption>AIチャットの対話画面</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section>
+        <h2>工夫した点</h2>
+        <ul>
+            <li>
+                C#（Web制御・画面）とPython（AI処理）の役割を明確に分離し、それぞれの強みを活かしたシステム構成にした点
+            </li>
+            <li>
+                画面側から送られてくるメッセージデータを、LLM（Ollama）が適切に理解できる役割形式（user/assistant）へ、FastAPI内で正確にマッピングし直すロジックを実装した点
+        </ul>
+    </section>
+
+</main>
+
+</body>
+
+</html>
