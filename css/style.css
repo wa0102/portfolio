@@ -287,12 +287,6 @@ section h2{
     margin: 0;
 }
 
-.work-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
 .screenshots {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -417,25 +411,76 @@ section h2{
 }
 
 .github-button{
-
-    margin-left:15px;
-
     background:#333;
-
 }
 
 .github-button:hover{
-
     background:#111;
+}
+
+/* ==========================
+   Works Tags
+========================== */
+
+.work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.work-tags span {
+    background: #e8f1ff;
+    color: #0d6efd;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.work-link{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#0d6efd;
+    color:#fff !important;
+    text-decoration:none;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.work-link:hover{
+    background:#0056d2;
+}
+
+.work-image img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:8px;
 
 }
 
-.github-link{
+.hero-buttons{
 
-    margin-left:20px;
+    display:flex;
 
-    color:#333;
+    justify-content:center;
 
-    font-weight:bold;
+    gap:20px;
 
+    flex-wrap:wrap;
+
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#666;
+    background:#fff;
+    margin-top:60px;
 }
