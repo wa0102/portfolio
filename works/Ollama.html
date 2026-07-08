@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ローカルAIチャットWebアプリ | Works</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <a href="../index.html">Portfolio</a>
+    </div>
+</header>
+
+<main class="work-detail">
+
+    <section>
+        <h1>ローカルAIチャットWebアプリ</h1>
+
+        <p>
+            C#（ASP.NET Core）とPython（FastAPI）を組み合わせて開発したAIチャットアプリです。<br>
+            Ollamaを使用し、外部へデータが流出しない完全ローカル環境でAIと対話できるシステムを構築しました。
+        </p>
+    </section>
+    
+    <section>
+        <h2>概要</h2>
+        <p>
+            ローカルLLMを利用したAIアシスタントWebアプリケーションです。
+            Web検索や現在日時・天気情報の取得、計算機能などを組み合わせ、
+            ユーザーの質問内容に応じて適切な処理を実行できるシステムを開発しました。
+        </p>
+    </section>
+
+    <section>
+        <h2>開発のきっかけ</h2>
+        <p>
+            AIがWeb検索を活用して最新の情報を取得し、その内容を基に回答を生成するシステムに興味を持ったことが、本作品を制作したきっかけです。
+        </p>
+        <p>
+            ASP.NET Core（C#）とPython（FastAPI）、Ollamaを組み合わせ、ローカル環境で動作するAIアシスタントの開発に挑戦しました。
+        </p>
+        <p>
+            また、WebアプリケーションとAIを連携させるシステム構成や、API連携、プロンプト設計について理解を深めることも、本作品を制作した目的の一つです。
+        </p>
+    </section>
+
+    <section>
+
+        <h2>使用技術</h2>
+
+        <table class="tech-table">
+
+            <thead>
+                <tr>
+                    <th>技術</th>
+                    <th>用途</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>ASP.NET Core MVC</td>
+                    <td>Web画面の構築、FastAPIとのAPI通信</td>
+                </tr>
+
+                <tr>
+                    <td>C#</td>
+                    <td>サーバー側処理、HTTP通信、画面制御</td>
+                </tr>
+
+                <tr>
+                    <td>Python</td>
+                    <td>AI処理、Web検索、天気情報取得、日時取得、計算処理の実装</td>
+                </tr>
+
+                <tr>
+                    <td>FastAPI</td>
+                    <td>REST APIの構築、リクエスト処理、Ollamaとの連携</td>
+                </tr>
+
+                <tr>
+                    <td>Pydantic</td>
+                    <td>APIリクエスト・レスポンスのデータ検証</td>
+                </tr>
+
+                <tr>
+                    <td>Ollama（Qwen3:8B）</td>
+                    <td>ローカルLLMによる回答生成</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section>
+        <h2>開発環境</h2>
+
+        <table class="tech-table">
+
+            <tr>
+                <th>OS</th>
+                <td>Windows 11</td>
+            </tr>
+
+            <tr>
+                <th>IDE</th>
+                <td>Visual Studio 2022</td>
+            </tr>
+
+            <tr>
+                <th>言語</th>
+                <td>C# / Python / JavaScript / HTML / CSS</td>
+            </tr>
+
+            <tr>
+                <th>フレームワーク</th>
+                <td>ASP.NET Core MVC / FastAPI</td>
+            </tr>
+
+            <tr>
+                <th>ライブラリ</th>
+                <td>Pydantic / DDGS / Requests</td>
+            </tr>
+
+            <tr>
+                <th>その他</th>
+                <td>Ollama / GitHub / 生成AI（設計・実装支援）</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section>
+
+        <h2>システム構成</h2>
+
+        <div class="system-flow">
+
+            <div class="flow-box">
+                <h3>ブラウザ</h3>
+                <p>
+                    チャット画面<br>
+                    ユーザー入力
+                </p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="flow-box">
+                <h3>ASP.NET Core MVC（C#）</h3>
+                <p>
+                    ・画面表示<br>
+                    ・FastAPIへのAPI呼び出し
+                </p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="flow-box">
+                <h3>FastAPI（Python）</h3>
+                <p>
+                    ・リクエスト受信<br>
+                    ・質問内容を判定<br>
+                    ・各機能へ振り分け
+                </p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="flow-box">
+                <h3>機能振り分け</h3>
+                <p>
+                ・Web検索<br>
+                ・天気取得<br>
+                ・日時取得<br>
+                ・計算処理<br>
+                ・AI回答処理へ振り分け
+                </p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="flow-box">
+                <h3>Ollama（Qwen3:8B）</h3>
+                <p>
+                    ・ローカルLLMによる回答生成
+                </p>
+            </div>
+
+            <div class="arrow">↓</div>
+
+            <div class="flow-box">
+                <h3>ブラウザ</h3>
+                <p>
+                    AIの回答を表示
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+        <h2>機能一覧</h2>
+
+        <ul>
+            <li>ローカルLLMとの対話</li>
+            <li>Web検索結果を活用した回答生成</li>
+            <li>現在日時・曜日の取得</li>
+            <li>現在の天気情報の取得</li>
+            <li>四則演算の計算機能</li>
+            <li>質問内容に応じた処理の自動振り分け</li>
+            <li>システムプロンプトによる応答制御</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>画面イメージ</h2>
+
+        <div class="screenshots">
+            <figure>
+                <img src="../images/Chat内容.png" alt="チャット画面">
+                <figcaption>AIチャットの対話画面</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section>
+        <h2>工夫した点</h2>
+        <ul>
+            <li>
+                C#（Web制御・画面）とPython（AI処理）の役割を明確に分離し、それぞれの強みを活かしたシステム構成にした点
+            </li>
+            <li>
+                質問内容を判定し、Web検索・天気・日時・計算・AI回答の中から適切な処理を自動で選択する仕組みを実装しました。
+            </li>
+            <li>
+                画面から送信されたメッセージをFastAPIで受け取り、Ollamaが利用できる形式へ変換して回答を生成する処理を実装しました。
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+</body>
+
+</html>
